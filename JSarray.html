@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+     const customerdetails = [];
+     function func () {
+ const id = document.getElementById("id").value;
+ const name = document.getElementById("name").value;
+  const mobile = document.getElementById("mobile").value;
+const address =  document.getElementById("address").value;
+  
+  var customer={id,name,mobile,address};
+  customerdetails.push(customer);
+  console.log(customer);
+  var table = document.getElementById("table");
+  var row = table.insertRow(-1);
+  var cell0 = row.insertCell(0);
+  var cell1 = row.insertCell(1);
+  var cell2 = row.insertCell(2);
+  var cell3 = row.insertCell(3);
+  cell0.innerHTML = id;
+  cell1.innerHTML = name;
+  cell2.innerHTML = mobile;
+ cell3.innerHTML = address;
+}
+  </script>
+       <style>
+.container{
+    background: cornflowerblue;
+                    color: white;
+   text-align: center;
+} 
+table{
+                    margin-top: 50px;
+                    text-align: center;
+                    background: cornflowerblue;
+                    color: white;
+            }
+       </style>
+</head>
+<body>
+    <div class="container"><br/>
+        <form action="">
+     
+      CUSTOMER ID:<input type="number" id="id" required>
+      <br/><br/>
+    
+     CUSTOMER NAME: 
+      <input type="text" id="name" required>
+      <br/><br/>
+    
+      CUSTOMER MOBILE:
+      <input type="text" id="mobile" required>
+      <br/><br/>
+    CUSTOMER ADDRESS:<input type="text" id ="address" required><br/><br/>
+      <input type="button" id="submit" onclick="func()" value="STORE">
+      <br/><br/>
+    </form>
+    </div><br/>
+    <table id="table" border="4">
+      <tr>
+        <th>CID</th>
+        <th>CNAME</th>
+        <th>CMOBILE</th>
+         <th>CADDRESS</th>
+      </tr>
+    </table>
+</body>
+</html>
